@@ -37,6 +37,19 @@ if(isset($_POST['option_save'])) {
 	
 }
  
+/*
+	@其他页面调用send email  使用 参数 address= 进行传递
+
+	@使用urlencode()进行邮箱地址转换，该插件使用urldecode取回原字符串
+	@获取原邮箱地址后直接显示
+*/
+//function get_email_address($show_send_email_to){
+//		$email_address_query =$_GET['address'];
+//		$show_send_email_to =	urldecode($email_address_query);
+//		return $show_send_email_to;
+//	
+//	}
+
 
 
 function send_email_menu(){      
@@ -67,23 +80,36 @@ function send_naihai_wp_mail_smtp_options_page() {
 		
 	
 
-	}
+	} //end if 
+	
    global $show_draft_tag;
 	if(isset($_POST['show_draft']) && $_POST['show_draft'] =='显示上次保存内容'){ $show_draft_tag = true;} 
 			elseif(isset($_POST['show_draft']) && $_POST['show_draft'] =='不显示上次保存内容'){$show_draft_tag = false;}
 			
 	if($show_draft_tag){ 
-		$show_draft_button_name = '不显示上次保存内容' ;
-		$show_send_email_to = get_option('send_email_to');
-		$show_send_email_subject = get_option('send_email_subject');
-		$show_send_email_message = get_option('send_email_message');
+			$show_draft_button_name = '不显示上次保存内容' ;
+			$show_send_email_to = get_option('send_email_to');
+			$show_send_email_subject = get_option('send_email_subject');
+			$show_send_email_message = get_option('send_email_message');
+		 
 		} 
-		else {
-		$show_draft_button_name = '显示上次保存内容' ;	
-		$show_send_email_to = '';
-		$show_send_email_subject = '';
-		$show_send_email_message = '';
-			}
+	elseif(!empty($_GET['address'])) {
+		  $show_send_email_to =	urldecode($_GET['address']);
+			$show_send_email_subject = '';
+			$show_send_email_message = urldecode($_GET['info']);
+			$show_draft_button_name = '显示上次保存内容' ;
+			}	
+	else{
+		
+			$show_send_email_to = '';
+			$show_send_email_subject = '';
+			$show_send_email_message = '';
+			$show_draft_button_name = '显示上次保存内容' ;
+				
+				}
+		
+		
+ 
 	
  unset($phpmailer);
 	?>
