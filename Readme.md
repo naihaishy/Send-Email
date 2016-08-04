@@ -35,16 +35,16 @@ Github  [https://github.com/naihaishy/Send-Email](https://github.com/naihaishy/S
 
 4.举例 有数据  
 
-		$item['name']='小张';
-		$item['age'] ='20';
-		$item['email']="12345678@qq.com";
-		$item['love'] ='他喜欢打篮球 看书 热爱登山';
-		$nh ="\n";//换行
-		<?php 
-		sprintf('<a href="?page=%s&action=%s&address=%s&info=%s">发送邮件</a>','send_email', 'mail', 
-		 urlencode( $item['email'] ), urlencode('姓名:'.$item['name'].$nh.'年龄:'.$item['age'].$nh.'爱好:'.$item['love']))
-		);
-		?>
+	$item['name']='小张';
+	$item['age'] ='20';
+	$item['email']="12345678@qq.com";
+	$item['love'] ='他喜欢打篮球 看书 热爱登山';
+	$nh ="\n";//换行
+	<?php 
+	sprintf('<a href="?page=%s&action=%s&address=%s&info=%s">发送邮件</a>','send_email', 'mail', 
+	 urlencode( $item['email'] ), urlencode('姓名:'.$item['name'].$nh.'年龄:'.$item['age'].$nh.'爱好:'.$item['love']))
+	);
+	?>
 
 这样在点击发送邮件时，即可快速转到Send Email页面，并且已经将小张的邮件地址填充到收件人表单，小张的基本信息也已经填充到了正文。
 
