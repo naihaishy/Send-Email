@@ -11,7 +11,10 @@
 
 6.邮件格式 html
 
-7.快速调用Send Email 并实现数据的自动填充[version 0.2]
+7.多人发送
+
+8.快速调用Send Email 并实现数据的自动填充[version 0.2]
+
 
 ###插件介绍: [https://blog.zhfsky.com/2016/08/04/send-mail.html](https://blog.zhfsky.com/2016/08/04/send-mail.html)
 
@@ -54,6 +57,10 @@ Github  [https://github.com/naihaishy/Send-Email](https://github.com/naihaishy/S
 
  
 2016/08/04 version 0.1 最初版本
+
+1.英文半角逗号隔开多个收件人地址实现多人发信
+
+
 
 
 
