@@ -9,9 +9,10 @@ Version: 0.0.1
 
 */
  
-
-
+//判断是否已经存在了wp_mail_smtp.php 并且已经启用
+if (!function_exists('wp_mail_smtp_activate')){
 require_once('wp_mail_smtp.php');
+}
 
  //保存数据
 if(isset($_POST['option_save'])) {
