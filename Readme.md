@@ -1,4 +1,4 @@
-###功能:
+### 功能:
 1.Wordpress SMTP配置
 
 2.发送邮件至任意人
@@ -16,17 +16,17 @@
 8.快速调用Send Email 并实现数据的自动填充[version 0.2]
 
 
-###插件介绍: [https://blog.zhfsky.com/2016/08/04/send-mail.html](https://blog.zhfsky.com/2016/08/04/send-mail.html)
+### 插件介绍: [https://blog.zhfsky.com/2016/08/04/send-mail.html](https://blog.zhfsky.com/2016/08/04/send-mail.html)
 
 
-###插件下载:  [https://blog.zhfsky.com/2016/08/04/send-mail.html](https://blog.zhfsky.com/2016/08/04/send-mail.html)
+### 插件下载:  [https://blog.zhfsky.com/2016/08/04/send-mail.html](https://blog.zhfsky.com/2016/08/04/send-mail.html)
 
 Github  [https://github.com/naihaishy/Send-Email](https://github.com/naihaishy/Send-Email)
 
 
 
 
-###版本介绍:
+### 版本介绍:
 
 2016/08/05 0:55 version 0.2 增加了参数传递 
 
